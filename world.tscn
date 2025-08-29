@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct031qocc6x38"]
+
+[ext_resource type="PackedScene" uid="uid://dtqp0uujcvbk8" path="res://player.tscn" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://tq8lyv8d4xx2" path="res://maze.tscn" id="1_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://d0657v4cyfmn7" path="res://turtle.tscn" id="2_tlwt5"]
+
+[node name="World" type="Node2D"]
+
+[node name="Maze" parent="." instance=ExtResource("1_tlwt5")]
+
+[node name="Player" parent="." instance=ExtResource("1_fj7yv")]
+position = Vector2(100, 401)
+
+[node name="Turtle" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(288, 258)
+
+[node name="Turtle2" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(414, 470)
+
+[node name="Turtle3" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(741, 372)
+
+[node name="Turtle4" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(959, 469)
+
+[node name="Turtle5" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(535, 242)
+
+[node name="Turtle6" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(752, 157)

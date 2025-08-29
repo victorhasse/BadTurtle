@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0657v4cyfmn7"]
+
+[ext_resource type="Texture2D" uid="uid://cl885h1g76fh5" path="res://assets/labirinto_assets/turtle_00.png" id="1_2ssyi"]
+[ext_resource type="Script" uid="uid://do5c62l2h6p52" path="res://turtle.gd" id="1_w1etq"]
+[ext_resource type="Texture2D" uid="uid://b0kganmaxcb6l" path="res://assets/labirinto_assets/turtle_01.png" id="2_w1etq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ghgcf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2ssyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w1etq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hlk0a"]
+radius = 18.0
+
+[node name="Turtle" type="CharacterBody2D"]
+script = ExtResource("1_w1etq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ghgcf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hlk0a")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
