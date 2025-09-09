@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtqp0uujcvbk8"]
+[gd_scene load_steps=8 format=3 uid="uid://dtqp0uujcvbk8"]
 
 [ext_resource type="Script" uid="uid://dfgrl7qrewiaq" path="res://player.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://bqpdwosqk7gyd" path="res://assets/labirinto_assets/player_00.png" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://b7y2q1j784sv4" path="res://assets/labirinto_assets/player_01.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://cpsur3tadu20v" path="res://assets/labirinto_assets/super_00.png" id="4_sweqy"]
+[ext_resource type="Texture2D" uid="uid://74rwivbyuu1n" path="res://assets/labirinto_assets/super_01.png" id="5_2hs0m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
 animations = [{
@@ -14,7 +16,18 @@ animations = [{
 "texture": ExtResource("2_i3pqv")
 }],
 "loop": true,
-"name": &"default",
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2hs0m")
+}],
+"loop": true,
+"name": &"super",
 "speed": 5.0
 }]
 
@@ -26,6 +39,11 @@ script = ExtResource("1_i3pqv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hqtel")
+animation = &"normal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_sweqy")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
