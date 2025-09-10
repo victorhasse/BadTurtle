@@ -1,4 +1,4 @@
-# 🎮 Bad Turtles
+# 🎮 Bad Turtles / Labirinto
 
 Este projeto foi desenvolvido durante as aulas do professor [@saulopz](https://github.com/saulopz).
 A base do jogo foi construída em sala, seguindo o exemplo dado pelo professor, e depois expandi com algumas melhorias próprias.
@@ -11,15 +11,12 @@ A base do jogo foi construída em sala, seguindo o exemplo dado pelo professor, 
 
 * ✅ Adicionei um **sistema de pausa**, que não estava presente na versão apresentada em aula.
 
-<!--
 ## 📸 Screenshots
 
-![gameplay]()
-![pausedgame]()
-![gameover]()
-
--->
-
+![gameplay](https://github.com/user-attachments/assets/f36f6629-04e9-4dcf-8956-c209e4ead385)
+![pausedgame](https://github.com/user-attachments/assets/687a81ad-eee9-4a39-aa08-35628899336a)
+![superpower](https://github.com/user-attachments/assets/fc91046f-6207-41e2-9494-e3bf6fa1e304)
+![gameover](https://github.com/user-attachments/assets/74a66269-04de-4ba1-93db-a73ab4e4f819)
 
 ## 🛠️ Tecnologias utilizadas
 
